@@ -1,6 +1,9 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "homepage": "http://davelan.github.io/oms-client-web",
   "scripts": {
+    "deploy": "gh-pages -d web-build",
+    "predeploy": "expo build:web",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -9,6 +12,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "axios": "^0.21.1",
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
@@ -20,7 +24,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "@babel/core": "^7.9.0",
+    "gh-pages": "^3.2.0"
   },
   "private": true
 }

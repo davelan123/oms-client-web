@@ -1,5 +1,14 @@
-import { TextField } from '@material-ui/core';
+import  TextField  from '@material-ui/core/TextField';
 import React from 'react';
+import { makeStyles } from "@material-ui/core";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setFirstName,
+  setLastName,
+  setCity,
+  setCountry,
+  setPhone}
+ from "../store/contacts/action";
 
 const useStyles = makeStyles((theme)=>({
     root: {
@@ -36,6 +45,7 @@ function Contacts() {
     const changeInputValue =  (e) => {
         switch (+e.target.id.substring(15,16)){
             case 0:
+                console.log(e.target.value);
                 return dispatch(setFirstName(e.target.value));
             case 1:
                 return dispatch(setLastName(e.target.value));
@@ -54,10 +64,10 @@ function Contacts() {
         <div className={classes.root}>
             <form className={classes.containerInputs} noValidate autoComplete="off">
                 {
-                    inputs.map(({id,label=""}) => {
+                    inputs.map(({ id, label = "" }) => {
                         return (
                             <TextField
-                                key={}
+                                key={`${id}_${label.substr(0,5)}`}
                                 className={classes.input}
                                 id={`outlined-basic ${id}`}
                                 label={label}
