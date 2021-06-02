@@ -1,3 +1,5 @@
+import { STEP_INCREMENT, STEP_DECREMENT, STEP_RESET } from "./action"
+
 const initialState = {
   step: 0,
   steps: [

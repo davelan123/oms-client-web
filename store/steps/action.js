@@ -4,7 +4,7 @@ export const STEP_RESET = "STEP_RESET";
 export const FINAL_POST = "FINAL_POST";
 
 export const handleNext = () => ({
-    type: STEP_INCREMENT,
+  type: STEP_INCREMENT,
 });
 
 export const handleBack = () => ({
