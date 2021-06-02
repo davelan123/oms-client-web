@@ -12,6 +12,6 @@ export const axioPostArticles = () => (dispatch, getState) => {
         phone: data.contactsVault.formData.phone,
         deliveryMethod: data.deliveryVault.deliveryMethod,
         paymentMethod: data.paymentVault.paymentMethod,
-    }
+    };
     axios.post("https://5c3755177820ff0014d92711.mockapi.io/orders",formData);
-}
+};

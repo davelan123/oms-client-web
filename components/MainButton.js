@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useDispatch, useSelector } from "redux-thunk";
-import {axiosPostArticles} from "../store/action";
+import { useDispatch, useSelector } from "react-redux";
+import axioPostArticles from "../store/action";
 
 const useStyles = makeStyles((theme) => ({
   backButton: {
@@ -32,10 +32,21 @@ function MainButton() {
  const clickNextStep = () => {
      dispatch(handleNext());
      if(step ===3){
-         dispatch(axiosPostArticles());
+         dispatch(axioPostArticles());
      }
- }
-  return <div></div>;
+ };
+ const clickPrevStep= () => {
+     dispatch(handleBack());
+ };
+
+ const clickResetStep = () => {
+   dispatch(handleReset());
+   dispatch(resetForm());
+ };
+
+  return <div>
+
+  </div>;
 }
 
 export default MainButton;
