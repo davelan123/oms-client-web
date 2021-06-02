@@ -43,9 +43,10 @@ function Contacts() {
     const dispatch = useDispatch();
 
     const changeInputValue =  (e) => {
+        console.log(`change input value`+e.target.id.substring(15, 16));
         switch (+e.target.id.substring(15,16)){
             case 0:
-                console.log(e.target.value);
+                //console.log(e.target.value);
                 return dispatch(setFirstName(e.target.value));
             case 1:
                 return dispatch(setLastName(e.target.value));
