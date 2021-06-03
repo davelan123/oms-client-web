@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector} from "react-redux";
 
-
-
 function SummaryInfo() {
     const {firstName, lastName, country, city, phone } = useSelector((state) => state.contactsVault.formData);
     const delivery = useSelector((state) => state.deliveryVault.deliveryMethod);
@@ -30,22 +28,23 @@ function SummaryInfo() {
             <li className="contacts__item">First Name:{firstName}</li>
             <li className="contacts__item">Last Name:{lastName}</li>
             <li className="contacts__item">Country:{country}</li>
+            <li className="contacts__item">Country:{city}</li>
             <li className="contacts__item">Phone:{phone}</li>
           </ul>
         </div>
         <div className="delivery">
-            <h4 className="delivery__title">Delivery title:</h4>
-            <ul className="delivery__list">
-                <li className="delivery_item">
-                    {delivery} / {getDeliveryTime(delivery)}
-                </li>
-            </ul>
+          <h4 className="delivery__title">Delivery title:</h4>
+          <ul className="delivery__list">
+            <li className="delivery_item">
+              {delivery} / {getDeliveryTime(delivery)}
+            </li>
+          </ul>
         </div>
         <div className="payment">
-            <h4 className="payment__title">Payment title:</h4>
-            <ul className="payment__list">
-                <li className="payment__item">{payment}</li>
-            </ul>
+          <h4 className="payment__title">Payment title:</h4>
+          <ul className="payment__list">
+            <li className="payment__item">{payment}</li>
+          </ul>
         </div>
       </div>
     );
