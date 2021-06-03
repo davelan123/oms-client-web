@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector} from "react-redux";
 
+
+
 function SummaryInfo() {
     const {firstName, lastName, country, city, phone } = useSelector((state) => state.contactsVault.formData);
     const delivery = useSelector((state) => state.deliveryVault.deliveryMethod);
@@ -25,10 +27,10 @@ function SummaryInfo() {
         <div className="contacts">
           <h4 className="contacts_title">Contact Summary:</h4>
           <ul className="contacts_list">
-            <li className="contacts__item">First Name:</li>
-            <li className="contacts__item">Last Name:</li>
-            <li className="contacts__item">Country:</li>
-            <li className="contacts__item">Phone:</li>
+            <li className="contacts__item">First Name:{firstName}</li>
+            <li className="contacts__item">Last Name:{lastName}</li>
+            <li className="contacts__item">Country:{country}</li>
+            <li className="contacts__item">Phone:{phone}</li>
           </ul>
         </div>
         <div className="delivery">

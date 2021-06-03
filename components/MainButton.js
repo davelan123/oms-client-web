@@ -6,6 +6,7 @@ import {axioPostArticles} from "../store/action";
 import { handleNext, handleBack, handleReset } from "../store/steps/action";
 import {resetForm } from "../store/contacts/action";
 
+
 const useStyles = makeStyles((theme) => ({
   backButton: {
     marginRight: theme.spacing(1),
@@ -20,8 +21,6 @@ function MainButton() {
   const dispatch = useDispatch();
   const classes = useStyles();
   const goNextPage = () => {
-    console.log("go next pages checking");
-    console.log(request);
     if (
       request &&
       request.formData &&
@@ -31,7 +30,6 @@ function MainButton() {
       request.formData.city &&
       request.formData.phone
     ) {
-      console.log("data are set.");
       return true;
     }
   };

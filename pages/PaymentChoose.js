@@ -5,6 +5,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
+import { setPaymentMethod } from "../store/payment/action";
+
 const useStyles = makeStyles((theme) => ({
   test: {
     textAlign: "center",
@@ -41,7 +43,7 @@ function PaymentChoose() {
     <div className={classes.test}>
       <FormControl className={classes.root} component="fieldset">
         <RadioGroup
-          className={classes.payment}
+          className={classes.container}
           aria-label="gender"
           name="gender1"
           value={paymentMethod}

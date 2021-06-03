@@ -1,10 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio  from "@material-ui/core/RadioGroup";
+import Radio  from "@material-ui/core/Radio";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import { useSelector, useDispatch } from "react-redux";
 import React from "react";
+import {setDeliveryCompany } from "../store/delivery/action";
 
 const useStyles = makeStyles((theme) => ({
   test: {
@@ -19,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
     flex: "0 1 48%",
     boxShadow: "1px 1px 4px rgba(0,0,0,0.5)",
     borderRadius: "10px",
+    marginBottom: "15px",
+    marginRight: "5px",
+  },
+  delivery1: {
+    margin: "0px 0px 20px 0px",
   },
 }));
 
@@ -53,7 +59,7 @@ function DeliveryChoose() {
                   value={nameMethod}
                   control={<Radio />}
                   label={nameMethod}
-                ></FormControlLabel>
+                />
                 <img src={image} alt="" width="30px" height="30px" />
                 <p>Delivery Days: {timeToPost}</p>
               </div>
