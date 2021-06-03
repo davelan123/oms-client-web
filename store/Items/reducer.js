@@ -24,20 +24,21 @@ const initialState = {
 };
 
 export const itemsReducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case ADD_ITEM:
       return {
         ...state,
         items: state.items.map((item) =>
-          item.id === action.id ? { ...item, qty: item.qty + 1 } : item
+          item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item
         ),
       };
     case REMOVE_ITEM:
       return {
         ...state,
         items: state.items.map((item) =>
-          item.id === action.id
-            ? { ...item, qty: item.qty > 0 ? item.qty - 1 : 0 }
+          item.id === action.payload.id
+            ? { ...item, qty: action.payload.qty > 0 ? item.qty - 1 : 0 }
             : item
         ),
       };

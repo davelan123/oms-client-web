@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from "react-native";
+import Counter from "../components/Counter";
 
 function Item(item) {
     console.log(item);
@@ -15,7 +16,7 @@ function Item(item) {
           <Text>${item.item.price}</Text>
         </View>
         <View style={styles.row}>
-          <Text>{item.item.qty}</Text>
+          <Counter item={item.item} />
         </View>
       </View>
     );
@@ -23,8 +24,9 @@ function Item(item) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginLeft:100,
+    marginRight:100,
     flexDirection: "row",
-    backgroundColor: "#ccc",
     justifyContent: "flex-start",
 
   },
