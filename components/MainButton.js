@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useDispatch, useSelector } from "react-redux";
 import {axioPostArticles} from "../store/action";
+import { handleNext, handleBack, handleReset } from "../store/steps/action";
+import {resetForm } from "../store/contacts/action";
 
 const useStyles = makeStyles((theme) => ({
   backButton: {
@@ -14,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function MainButton() {
   const { step, steps } = useSelector((state) => state.stepVault);
-  const request = useSelector((state) => state.constactsVault);
+  const request = useSelector((state) => state.contactsVault);
   const dispatch = useDispatch();
   const classes = useStyles();
   const goNextPage = () => {

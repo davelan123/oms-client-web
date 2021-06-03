@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector} from "react-redux";
 
 function SummaryInfo() {
     const {firstName, lastName, country, city, phone } = useSelector((state) => state.contactsVault.formData);

@@ -27,7 +27,7 @@ function DeliveryChoose() {
   const deliveryMethod = useSelector(
     (state) => state.deliveryVault.deliveryMethod
   );
-  const allMethods = useSelector((state) => state.allMethods);
+  const allMethods = useSelector((state) => state.deliveryVault.allMethods);
   const dispatch = useDispatch();
   const handleChange = (event) => {
     dispatch(setDeliveryCompany({ deliveryMethod: event.target.value }));
