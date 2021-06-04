@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   body: {
     // textAlign: "center",
-    padding:"20 px"
+    // padding:"20 px"
   },
   order_items: {
     // paddingTop: "30px",

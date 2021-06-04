@@ -89,51 +89,53 @@ function Container() {
     handleClose();
   };
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={chooseDemo1}>Demo1</MenuItem>
-            <MenuItem onClick={chooseDemo2}>Demo2</MenuItem>
-          </Menu>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Demos
-          </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+    <div>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={handleClick}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={chooseDemo1}>Demo1</MenuItem>
+              <MenuItem onClick={chooseDemo2}>Demo2</MenuItem>
+            </Menu>
+            <Typography className={classes.title} variant="h6" noWrap>
+              Demos
+            </Typography>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-        </Toolbar>
-      </AppBar>
-      <View style={styles.dashboard}>
-        {isDemo2 ? <Demo2 /> : <Demo1 />}
-      </View>
+          </Toolbar>
+        </AppBar>
+      </div>
+      <div>
+        <View style={styles.dashboard}>{isDemo2 ? <Demo2 /> : <Demo1 />}</View>
+      </div>
     </div>
   );
 }

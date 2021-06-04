@@ -1,34 +1,30 @@
 import { makeStyles } from "@material-ui/core/styles";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
+import Radio  from "@material-ui/core/Radio";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import { useSelector, useDispatch } from "react-redux";
 import React from "react";
-import { setDeliveryCompany } from "../store/delivery/action";
+import {setDeliveryCompany } from "../store/delivery/action";
 
 const useStyles = makeStyles((theme) => ({
   test: {
     testAlign: "center",
   },
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
+  root: {},
   container: {
     textAlign: "center",
     flexDirection: "row",
   },
   delivery: {
-    flex:1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems:"center",
-    flexWrap: "wrap",
+    flex: "0 1 48%",
     boxShadow: "1px 1px 4px rgba(0,0,0,0.5)",
     borderRadius: "10px",
     marginBottom: "15px",
     marginRight: "5px",
+  },
+  delivery1: {
+    margin: "0px 0px 20px 0px",
   },
 }));
 

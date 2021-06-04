@@ -4,12 +4,11 @@ import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   info: {
-    display: "flex",
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    // Try different values for justifyContent ('flex-start', 'flex-end', 'center',         'space-between', 'space-around', 'space-evenly')
-    justifyContent: "space-evenly",
+    // display: "flex",
+    // flex: 1,
+    // flexDirection: "column",
+    // alignItems: "center",
+    // justifyContent: "space-evenly",
   },
 }));
 
