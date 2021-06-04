@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/oms-client-web/static/js/app.f10c7601.chunk.js",
-    "app.js.map": "/oms-client-web/static/js/app.f10c7601.chunk.js.map",
+    "app.js": "/oms-client-web/static/js/app.c8413f9c.chunk.js",
+    "app.js.map": "/oms-client-web/static/js/app.c8413f9c.chunk.js.map",
     "runtime~app.js": "/oms-client-web/static/js/runtime~app.76611211.js",
     "runtime~app.js.map": "/oms-client-web/static/js/runtime~app.76611211.js.map",
     "static/js/2.7f2dadde.chunk.js": "/oms-client-web/static/js/2.7f2dadde.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.76611211.js",
     "static/js/2.7f2dadde.chunk.js",
-    "static/js/app.f10c7601.chunk.js"
+    "static/js/app.c8413f9c.chunk.js"
   ]
 }
