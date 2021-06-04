@@ -1,10 +1,23 @@
 import React from 'react';
 import { useSelector} from "react-redux";
+import {makeStyles} from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  info: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    // Try different values for justifyContent ('flex-start', 'flex-end', 'center',         'space-between', 'space-around', 'space-evenly')
+    justifyContent: "space-evenly",
+  },
+}));
 
 function SummaryInfo() {
     const {firstName, lastName, country, city, phone } = useSelector((state) => state.contactsVault.formData);
     const delivery = useSelector((state) => state.deliveryVault.deliveryMethod);
     const payment = useSelector((state) => state.paymentVault.paymentMethod);
+    const classes = useStyles();
     const getDeliveryTime = (delivery) => {
         if(delivery){
             if(delivery==="DHL"){
@@ -21,8 +34,8 @@ function SummaryInfo() {
         else  return "Please contact us for more information."
     };
     return (
-      <div className="info">
-        <div className="contacts">
+      <div className={classes.info}>
+        <div className={classes.contacts}>
           <h4 className="contacts_title">Contact Summary:</h4>
           <ul className="contacts_list">
             <li className="contacts__item">First Name:{firstName}</li>

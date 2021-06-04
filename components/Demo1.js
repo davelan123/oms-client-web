@@ -30,9 +30,9 @@ function Demo1() {
 export default Demo1;
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "center",
+      // flex: 1,
+      // backgroundColor: "#fff",
+      // alignItems: "center",
+      // justifyContent: "center",
     },
   });

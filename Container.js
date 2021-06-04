@@ -142,9 +142,9 @@ export default Container;
 
 const styles = StyleSheet.create({
   dashboard: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // flex: 1,
+    // backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
